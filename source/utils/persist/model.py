@@ -1,6 +1,4 @@
 import pandas
-from sklearn import model_selection
-from sklearn.linear_model import LogisticRegression
 from sklearn import tree, svm
 from sklearn.externals import joblib
 import numpy as np
@@ -62,4 +60,4 @@ class Model:
         result = np.array([loaded_model.predict(ml_data_array)])
         result = np.reshape(result, (len(ml_data_array),1))
         output = np.append(ml_data_array, result, axis=1)
-        np.savetxt('test.csv', output, fmt='%.1f', delimiter=', ')
+        np.savetxt('iris_output.csv', output, fmt='%.1f', delimiter=', ')
